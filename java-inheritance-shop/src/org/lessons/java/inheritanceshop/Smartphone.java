@@ -19,7 +19,10 @@ public class Smartphone extends Prodotto {
         return IMEI;
     }
 
-    // ha senso mettere un setter anche per l'imei?
+    // ha senso mettere un setter anche per l'imei? Nel caso si può mettere e settare su privato
+    private void setIMEI(long IMEI) {
+        this.IMEI = IMEI;
+    }
 
     public String getMemoria() {
         String memoria = this.memoria + " GB";

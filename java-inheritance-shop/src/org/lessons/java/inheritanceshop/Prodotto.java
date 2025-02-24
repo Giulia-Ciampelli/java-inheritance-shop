@@ -1,4 +1,5 @@
 // TODO: Usa l'override per rendere i metodi più veloci da usare
+// la classe Prodotto può essere considerata astratta? Perchè?
 
 package org.lessons.java.inheritanceshop;
 
@@ -9,7 +10,7 @@ public class Prodotto {
     protected String nome;
     protected String marca;
     protected float prezzo;
-    protected float iva = 0.22f; // essendo solo prodotti di elettronica, sono tutti tassati allo stesso modo
+    protected float iva = 0.22f; // essendo solo prodotti di elettronica, sono tutti tassati allo stesso modo; questa ha senso metterla static
     
     Prodotto(String nome, String marca, float prezzo) {
         Random rand = new Random();
