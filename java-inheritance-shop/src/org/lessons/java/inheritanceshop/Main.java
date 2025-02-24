@@ -17,5 +17,13 @@ public class Main {
         System.out.println(jbl.getPrezzo());
         System.out.println(jbl.getColore());
         System.out.println(jbl.getWireless());
+
+        Televisori lg = new Televisori("LG 32LQ63006LA", "LG", 32, true, 189.70f);
+        
+        System.out.println(lg.getNomeEsteso());
+        System.out.println(lg.getMarca());
+        System.out.println(lg.getPrezzo());
+        System.out.println(lg.getDimensioni());
+        System.out.println(lg.getSmart());
     }
 }

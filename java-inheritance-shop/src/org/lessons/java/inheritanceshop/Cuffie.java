@@ -20,8 +20,8 @@ public class Cuffie extends Prodotto {
         this.colore = colore;
     }
 
-    // trasforma in stringa per renderlo più leggibile
-    public boolean getWireless() {
+    public String getWireless() {
+        String wireless = "wireless: " + this.wireless;
         return wireless;
     }
 
