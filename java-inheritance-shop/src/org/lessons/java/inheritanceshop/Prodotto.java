@@ -43,13 +43,26 @@ public class Prodotto {
         return result;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public String getMarca() {
+        String marca = "marca: " + this.marca;
         return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getPrezzo() {
         float prezzoIva = this.prezzo + (this.prezzo * iva);
-        String prezzoFormat = prezzoIva + "$";
-        return prezzoFormat;
+        String prezzoFormat = String.format("%.2f", prezzoIva);
+        return prezzoFormat + "$";
+    }
+
+    public void setPrezzo(float prezzo) {
+        this.prezzo = prezzo;
     }
 }

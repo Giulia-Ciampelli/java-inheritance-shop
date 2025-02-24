@@ -14,12 +14,19 @@ public class Smartphone extends Prodotto {
         this.memoria = memoria;
     }
 
-    public long getIMEI() {
+    public String getIMEI() {
+        String IMEI = "codice IMEI: " + this.IMEI;
         return IMEI;
     }
 
+    // ha senso mettere un setter anche per l'imei?
+
     public String getMemoria() {
-        String memoria = this.memoria + "GB";
+        String memoria = this.memoria + " GB";
         return memoria;
+    }
+
+    public void setMemoria(int memoria) {
+        this.memoria = memoria;
     }
 }
