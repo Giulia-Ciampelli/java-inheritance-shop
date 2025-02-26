@@ -3,12 +3,44 @@ package org.lessons.java.inheritanceshop;
 import java.util.Scanner;
 
 public class Carrello {
+
+    // come posso accedere agli oggetti nel main, che voglio tenere separati? Array
+    Prodotto[] prodotti = new Prodotto[0];
+
+    public void riempiCarrello(Prodotto prodotto) {
+        Prodotto[] prodottiAggiornati = new Prodotto[prodotti.length + 1];
+
+        for (int i = 0; i < prodotti.length; i++) {
+            prodottiAggiornati[i] = prodotti[i];
+        }
+        prodottiAggiornati[prodotti.length] = prodotto;
+        prodotti = prodottiAggiornati;
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Stai cercando cuffie, smartphone o televisori? ");
         String search = input.nextLine();
-        System.out.printf("Hai scritto: " + search);
 
-        // come posso accedere agli oggetti nel main, che voglio tenere separati?
+        // per ora creo un nuovo prodotto
+        switch (search) {
+            case "telefono":
+            case "smartphone":
+                System.out.println("Hai scelto lo smartphone");
+                break;
+
+            case "tv":
+            case "televisore":
+                System.out.println("Hai scelto il televisore");
+                break;
+
+            case "cuffie":
+                System.out.println("Hai scelto le cuffie");
+                break;
+
+            default:
+                System.out.println("Mi spiace, non abbiamo quel prodotto in stock.");
+                break;
+        }
     }
 }

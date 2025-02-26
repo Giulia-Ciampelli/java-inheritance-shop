@@ -20,15 +20,16 @@ public class Prodotto {
     protected String nome;
     protected String marca;
     protected float prezzo;
-    protected float iva = 0.22f; // essendo solo prodotti di elettronica, sono tutti tassati allo stesso modo; questa ha senso metterla static
+    protected float iva = 0.22f; // essendo solo prodotti di elettronica, sono tutti tassati allo stesso modo;
+                                 // questa ha senso metterla static
     protected float sconto;
-    
+
     // switch case per sconti
     // caso default per tessera fedeltà: 0.02
     // sconto su telefoni che hanno meno di 32 gb di memoria: 0.05
     // sconto su tv non smart: 0.10
     // sconto su cuffie cablate: 0.07
-    
+
     Prodotto(String nome, String marca, float prezzo) {
         Random rand = new Random();
 
