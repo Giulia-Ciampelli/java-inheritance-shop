@@ -39,7 +39,7 @@ public class Prodotto {
     }
 
     public String getNomeEsteso() {
-        String result = this.nome + "-" + this.codice;
+        String result = "Nome: " + this.nome + "-" + this.codice;
         return result;
     }
 
@@ -48,7 +48,7 @@ public class Prodotto {
     }
 
     public String getMarca() {
-        String marca = "marca: " + this.marca;
+        String marca = "Marca: " + this.marca;
         return marca;
     }
 
@@ -59,7 +59,7 @@ public class Prodotto {
     public String getPrezzo() {
         float prezzoIva = this.prezzo + (this.prezzo * iva);
         String prezzoFormat = String.format("%.2f", prezzoIva);
-        return prezzoFormat + "$";
+        return "Prezzo: " + prezzoFormat + "$";
     }
 
     public void setPrezzo(float prezzo) {

@@ -15,7 +15,7 @@ public class Smartphone extends Prodotto {
     }
 
     public String getIMEI() {
-        String IMEI = "codice IMEI: " + this.IMEI;
+        String IMEI = "Codice IMEI: " + this.IMEI;
         return IMEI;
     }
 
@@ -25,11 +25,17 @@ public class Smartphone extends Prodotto {
     }
 
     public String getMemoria() {
-        String memoria = this.memoria + " GB";
+        String memoria = "Memoria: " + this.memoria + " GB";
         return memoria;
     }
 
     public void setMemoria(int memoria) {
         this.memoria = memoria;
+    }
+    
+    @Override
+    public String toString() {
+        String result = String.format("%s\n %s\n %s\n %s\n", getNomeEsteso(), getMarca(), getMemoria(), getPrezzo());
+        return result;
     }
 }

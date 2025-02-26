@@ -41,10 +41,6 @@ public class Carrello {
                 float prezzoSmartphone = input.nextFloat();
 
                 prodottoScelto = new Smartphone(nomeSmartphone, marcaSmartphone, memoriaSmartphone, prezzoSmartphone);
-
-                // TEST
-                System.out.println(
-                        "Nuovo prodotto: " + nomeSmartphone + marcaSmartphone + memoriaSmartphone + prezzoSmartphone);
                 break;
 
             case "tv":
@@ -63,10 +59,8 @@ public class Carrello {
                 boolean smartBooleanTV;
 
                 if (smartTV.equals("y")) {
-                    System.out.println("la tv è smart");
                     smartBooleanTV = true;
                 } else if (smartTV.equals("n")) {
-                    System.out.println("la tv non è smart");
                     smartBooleanTV = false;
                 } else {
                     System.out.println("errore, inserisci 'y' o 'n' per rispondere");
@@ -94,10 +88,8 @@ public class Carrello {
                 boolean wirelessBooleanCuffie;
 
                 if (wirelessCuffie.equals("y")) {
-                    System.out.println("la tv è smart");
                     wirelessBooleanCuffie = true;
                 } else if (wirelessCuffie.equals("n")) {
-                    System.out.println("la tv non è smart");
                     wirelessBooleanCuffie = false;
                 } else {
                     System.out.println("errore, inserisci 'y' o 'n' per rispondere");
@@ -115,5 +107,9 @@ public class Carrello {
                 break;
         }
         riempiCarrello(prodottoScelto);
+
+        System.out.printf("Prodotto scelto: \n" + prodottoScelto);
+
+        input.close();
     }
 }

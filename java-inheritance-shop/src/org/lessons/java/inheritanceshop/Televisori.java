@@ -12,7 +12,7 @@ public class Televisori extends Prodotto {
     }
 
     public String getDimensioni() {
-        String dimensioni = "schermo: " + this.dimensioni + " pollici";
+        String dimensioni = "Schermo: " + this.dimensioni + " pollici";
         return dimensioni;
     }
     
@@ -21,11 +21,17 @@ public class Televisori extends Prodotto {
     }
 
     public String getSmart() {
-        String smart = "smart: " + this.smart;
+        String smart = "Smart: " + this.smart;
         return smart;
     }
 
     public void setSmart(boolean smart) {
         this.smart = smart;
+    }
+   
+    @Override
+    public String toString() {
+        String result = String.format("%s\n %s\n %s\n %s\n %s\n", getNomeEsteso(), getMarca(), getDimensioni(), getSmart(), getPrezzo());
+        return result;
     }
 }

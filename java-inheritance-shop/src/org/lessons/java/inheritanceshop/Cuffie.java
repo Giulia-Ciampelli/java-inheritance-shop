@@ -12,7 +12,7 @@ public class Cuffie extends Prodotto {
     }
 
     public String getColore() {
-        String colore = "colore: " + this.colore;
+        String colore = "Colore: " + this.colore;
         return colore;
     }
 
@@ -21,11 +21,17 @@ public class Cuffie extends Prodotto {
     }
 
     public String getWireless() {
-        String wireless = "wireless: " + this.wireless;
+        String wireless = "Wireless: " + this.wireless;
         return wireless;
     }
 
     public void setWireless(boolean wireless) {
         this.wireless = wireless;
+    }
+
+    @Override
+    public String toString() {
+        String result = String.format("%s\n %s\n %s\n %s\n %s\n", getNomeEsteso(), getMarca(), getColore(), getWireless(), getPrezzo());
+        return result;
     }
 }
