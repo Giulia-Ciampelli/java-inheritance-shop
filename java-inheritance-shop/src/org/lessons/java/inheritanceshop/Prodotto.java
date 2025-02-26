@@ -21,7 +21,7 @@ public class Prodotto {
     protected String marca;
     protected float prezzo;
     protected float iva = 0.22f; // essendo solo prodotti di elettronica, sono tutti tassati allo stesso modo; questa ha senso metterla static
-    protected float sconto;
+    protected boolean sconto = false;
 
     // switch case per sconti
     // caso default per tessera fedeltà: 0.02
@@ -64,5 +64,17 @@ public class Prodotto {
 
     public void setPrezzo(float prezzo) {
         this.prezzo = prezzo;
+    }
+
+    public String getSconto(float prezzoIva) {
+        if (sconto) {
+            float scontoCarta = prezzoIva - (prezzoIva * 0.02f);
+            return "Prezzo scontato: " + scontoCarta;
+        }
+        return "Prezzo normale: " + prezzoIva;
+    }
+
+    public void setSconto(boolean sconto) {
+        this.sconto = sconto;
     }
 }

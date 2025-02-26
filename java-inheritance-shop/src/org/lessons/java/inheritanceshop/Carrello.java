@@ -106,6 +106,17 @@ public class Carrello {
                 System.out.println("Mi spiace, non abbiamo quel prodotto in stock.");
                 break;
         }
+
+        // System.out.println("Hai la tessera fedeltà? (y/n) ");
+        // String rispostaTessera = input.nextLine();
+        
+        // spiegazione dovuta:
+        // 1. prendo un booleano e lo equivalgo all'input (solo due possibili, grazie all'else if)
+        // 2. il valore booleano passa al metodo setSconto
+        // da riconsiderare, il valore non passa
+        // boolean haCarta = rispostaTessera.equals("y");
+        // prodottoScelto.setSconto(haCarta);
+
         riempiCarrello(prodottoScelto);
 
         System.out.printf("Prodotto scelto: \n" + prodottoScelto);
