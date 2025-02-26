@@ -20,8 +20,7 @@ public class Prodotto {
     protected String nome;
     protected String marca;
     protected float prezzo;
-    protected float iva = 0.22f; // essendo solo prodotti di elettronica, sono tutti tassati allo stesso modo;
-                                 // questa ha senso metterla static
+    protected float iva = 0.22f; // essendo solo prodotti di elettronica, sono tutti tassati allo stesso modo; questa ha senso metterla static
     protected float sconto;
 
     // switch case per sconti
