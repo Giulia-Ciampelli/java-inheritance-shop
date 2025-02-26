@@ -43,7 +43,8 @@ public class Carrello {
                 prodottoScelto = new Smartphone(nomeSmartphone, marcaSmartphone, memoriaSmartphone, prezzoSmartphone);
 
                 // TEST
-                System.out.println("Nuovo prodotto: " + nomeSmartphone + marcaSmartphone + memoriaSmartphone + prezzoSmartphone);
+                System.out.println(
+                        "Nuovo prodotto: " + nomeSmartphone + marcaSmartphone + memoriaSmartphone + prezzoSmartphone);
                 break;
 
             case "tv":
@@ -59,18 +60,17 @@ public class Carrello {
 
                 System.out.println("La TV è smart? (y/n)");
                 String smartTV = input.next();
-                boolean smartBooleanTV; // da sistemare con un ternario, non prende il boolean
+                boolean smartBooleanTV;
 
                 if (smartTV.equals("y")) {
                     System.out.println("la tv è smart");
                     smartBooleanTV = true;
-                }
-                else if (smartTV.equals("n")) {
+                } else if (smartTV.equals("n")) {
                     System.out.println("la tv non è smart");
                     smartBooleanTV = false;
-                }
-                else {
-                    System.out.println("errore, inserisci Y o N per rispondere");
+                } else {
+                    System.out.println("errore, inserisci 'y' o 'n' per rispondere");
+                    smartBooleanTV = false; // RICORDA: serve il booleano in tutti i casi, o non lo prende
                 }
 
                 System.out.println("Inserisci il prezzo: ");
@@ -80,7 +80,34 @@ public class Carrello {
                 break;
 
             case "cuffie":
-                System.out.println("Hai scelto le cuffie");
+                System.out.println("Inserisci il nome: ");
+                String nomeCuffie = input.nextLine();
+
+                System.out.println("Inserisci la marca: ");
+                String marcaCuffie = input.nextLine();
+
+                System.out.println("Inserisci il colore: ");
+                String coloreCuffie = input.nextLine();
+
+                System.out.println("Le cuffie sono wireless? (y/n)");
+                String wirelessCuffie = input.next();
+                boolean wirelessBooleanCuffie;
+
+                if (wirelessCuffie.equals("y")) {
+                    System.out.println("la tv è smart");
+                    wirelessBooleanCuffie = true;
+                } else if (wirelessCuffie.equals("n")) {
+                    System.out.println("la tv non è smart");
+                    wirelessBooleanCuffie = false;
+                } else {
+                    System.out.println("errore, inserisci 'y' o 'n' per rispondere");
+                    wirelessBooleanCuffie = false;
+                }
+
+                System.out.println("Inserisci il prezzo: ");
+                float prezzoCuffie = input.nextFloat();
+
+                prodottoScelto = new Cuffie(nomeCuffie, marcaCuffie, coloreCuffie, wirelessBooleanCuffie, prezzoCuffie);
                 break;
 
             default:
